@@ -62,3 +62,6 @@ for stock in stockList:
     monitor = StockMonitor('sina', timeInterval, stock)
     thread = MonitorThread( monitor)
     thread.start()
+
+
+

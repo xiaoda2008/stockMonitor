@@ -63,6 +63,7 @@ class StockMonitor(object):
                 + "股票名称：" + stdt['name'] + '\n' \
                 + "当前价格：" + repr(stdt['now'])
                 sender.sendMails(mailSubject, mailContent)
+                print("已出发邮件提醒，" + self.monitorName +"结束运行！")
                 break
 
             if(stdt['now'] <= self.stockData.fPrice):
@@ -72,12 +73,12 @@ class StockMonitor(object):
                 + "股票名称：" + stdt['name'] + '\n' \
                 + "当前价格：" + repr(stdt['now'])
                 sender.sendMails(mailSubject, mailContent)
+                print("已出发邮件提醒，" + self.monitorName +"结束运行！")
                 break
-                
             
             time.sleep(self.timeInterval)
             
-        print("已出发邮件提醒，" + self.monitorName +"结束运行！")
+
 
 
 
