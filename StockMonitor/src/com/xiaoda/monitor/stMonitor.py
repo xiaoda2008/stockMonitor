@@ -6,7 +6,8 @@ Created on 2019年9月15日
 import easyquotation
 import json
 import time
-from com.xiaoda.utils.EmSender import EmailSender
+from com.xiaoda.utils.emSender import EmailSender
+from com.xiaoda.utils.stockMarket import StockMarketInfo
 
 
 class StockMonitor(object):
@@ -33,6 +34,14 @@ class StockMonitor(object):
         sender = EmailSender()
     
         while True:
+            
+            #判断一下时间，是否是交易时间
+            smInfo = StockMarketInfo()
+            #如果不是交易时间，则跳出循环，不监控
+            if(smInfo.isSmOpen()==0):
+                print("当前不是交易时间，" + self.monitorName + "退出运行")
+                break
+            
             quotation = easyquotation.use(self.dataSource)
             #snapshot = quotation.market_snapshot(prefix=True)
     

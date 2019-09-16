@@ -2,17 +2,19 @@
 Created on 2019年9月15日
 
 @author: xiaoda
+
+实际执行股票的监控
+
 '''
 
 if __name__ == '__main__':
     pass
 
 
-from com.xiaoda.monitor.StMonitor import StockMonitor
-from com.xiaoda.monitor.MtThread import MonitorThread
-from com.xiaoda.dataType.StDataType import StockDataType
+from com.xiaoda.monitor.stMonitor import StockMonitor
+from com.xiaoda.monitor.mtThread import MonitorThread
+from com.xiaoda.dataType.stDataType import StockDataType
 
-import threading
 
 '''
 monitor = StockMonitor('sina', '601318')
