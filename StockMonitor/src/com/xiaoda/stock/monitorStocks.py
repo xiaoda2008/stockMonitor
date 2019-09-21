@@ -11,9 +11,9 @@ if __name__ == '__main__':
     pass
 
 
-from com.xiaoda.monitor.stMonitor import StockMonitor
-from com.xiaoda.monitor.mtThread import MonitorThread
-from com.xiaoda.dataType.stDataType import StockDataType
+from com.xiaoda.stock.monitor.stMonitor import StockMonitor
+from com.xiaoda.stock.monitor.mtThread import MonitorThread
+from com.xiaoda.stock.dataType.stDataType import StockDataType
 
 
 '''
