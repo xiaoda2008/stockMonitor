@@ -7,7 +7,7 @@ import easyquotation
 import json
 import time
 from com.xiaoda.stock.utils.emSender import EmailSender
-from com.xiaoda.stock.utils.stockMarket import StockMarketInfo
+from com.xiaoda.stock.utils.stMarketInfo import StockMarketInfo
 
 
 class StockMonitor(object):
